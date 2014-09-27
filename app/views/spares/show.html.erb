@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Spare:</strong>
+  <%= @spare.spare %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @spare.car %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @spare.year %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @spare.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @spare.phone %>
+</p>
+
+<%= link_to 'Edit', edit_spare_path(@spare) %> |
+<%= link_to 'Back', spares_path %>

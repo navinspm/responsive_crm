@@ -1,0 +1,15 @@
+<%= simple_form_for(@spare) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :spare, placeholder: "SparePart Name" %>
+    <%= f.input :car , placeholder: "Car name"%>
+    <%= f.input :year, as: :integer, placeholder: "2014" %>
+    <%= f.input :email, placeholder: "example@email.com" %>
+    <%= f.input :phone , as: :integer, placeholder: "Mobile Number"%>
+  </div>
+  <br>
+  <div class="form-actions">
+    <%= f.button :submit ,"Get quotation by mail",class: "btn btn-success btn-lg"  %>
+  </div>
+<% end %>
