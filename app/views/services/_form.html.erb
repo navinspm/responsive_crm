@@ -1,0 +1,16 @@
+<%= simple_form_for(@service) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name ,placeholder: "Name"%>
+    <%= f.input :mobileno,placeholder: "Mobile"%>
+    <%= f.input :email,placeholder: "example@mail.com" %>
+    <%= f.input :car,placeholder: "Brio, City, maze" %>
+    <%= f.input :year,placeholder: "Model Year" %>
+    <%= f.input :problem %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Send us", class: "btn btn-large btn-success" %>
+  </div>
+<% end %>

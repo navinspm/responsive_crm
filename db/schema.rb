@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140927051137) do
+ActiveRecord::Schema.define(version: 20140927052436) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -52,6 +52,17 @@ ActiveRecord::Schema.define(version: 20140927051137) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "car"
+  end
+
+  create_table "services", force: true do |t|
+    t.string   "name"
+    t.string   "mobileno"
+    t.string   "email"
+    t.string   "car"
+    t.integer  "year"
+    t.text     "problem"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "spares", force: true do |t|
