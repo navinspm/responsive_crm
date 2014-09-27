@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  resources :cars
+
+       devise_for :admins, path: "admin", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register_navin', sign_up: 'known_only_to_me' }
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'cars#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

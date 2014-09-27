@@ -1,0 +1,16 @@
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">New Arrivals</h3>
+  </div>
+  <div class="panel-body">
+  <div class="row">
+     <% @cars.each do |car| %>
+     <div class="col-md-4">
+            <%= car.name %>
+            <%= link_to image_tag(car.image_url(:thumb)), car_path(car) ,  class: "img-responsive"%>
+            </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
