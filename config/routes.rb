@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :customers
+
   resources :cars
 
        devise_for :admins, path: "admin", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register_navin', sign_up: 'known_only_to_me' }

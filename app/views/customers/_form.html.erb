@@ -1,0 +1,22 @@
+<%= simple_form_for(@customer) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name , placeholder: "Name" %>
+    <%= f.input :email, placeholder: "example@email.com" , as: :email%>
+    <%= f.input :phone, as: :integer, placeholder: "Mobile number" , input_html: { minlength: 10 }%>
+    <%= f.input :doorno, placeholder: "Doorno" %>
+    <%= f.input :street, placeholder: "street" %>
+    <%= f.input :city, placeholder: "City" %>
+    <%= f.input :pincode, as: :integer,placeholder: "Pincode" %>
+    <%= f.input :car, placeholder: "Amaze,Brio,City" %>
+    <%= f.input :date , as: :datetime, start_year: Date.today.year - 90,
+                              end_year: Date.today.year , 
+                              order: [:day ,:month, :year] %>
+  </div>
+
+    <br/>
+  <div class="form-actions">
+    <%= f.button :submit, "Book" ,class: "btn btn-success btn-lg" %>
+  </div>
+<% end %>
