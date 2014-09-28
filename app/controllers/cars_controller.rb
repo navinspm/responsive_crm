@@ -19,5 +19,10 @@ class CarsController < ApplicationController
         format.html { render :new }
       end
     end
+
+    private
+    def car_params
+      params.require(:car).permit(:name,:price, :description,:image)
+    end
   end
 
