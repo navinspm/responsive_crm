@@ -9,21 +9,5 @@ class CarsController < ApplicationController
     end
   end
 
-  def create
-    @car = Car.new(car_params)
-
-    respond_to do |format|
-      if @car.save
-        format.html { redirect_to @car, notice: 'Car was successfully created.' }
-      else
-        format.html { render :new }
-      end
-    end
-
-
-private
-    def car_params
-      params.require(:car).permit(:name,:price, :description,:image)
-    end
   end
 
