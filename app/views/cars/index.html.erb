@@ -1,16 +1,42 @@
+<div>
 <div class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-title">New Arrivals</h3>
   </div>
   <div class="panel-body">
-  <div class="row">
-     <% @cars.each do |car| %>
-     <div class="col-md-4">
-            <%= car.name %>
-            <%= link_to image_tag(car.image_url(:thumb)), car_path(car) ,  class: "img-responsive"%>
-            </div>
-    <% end %>
+    <div class="row">
+      <% @cars.each do |car| %>
+        <div class="col-md-4">
+          <%= car.name %>     <br>
+          <%= link_to image_tag(car.image_url(:thumb)), car_path(car) ,  class: "img-responsive"%>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
+
+
+
+   <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag "image.jpg" %>
+        </div>
+        <% @cars.each do |car| %>
+        <div class="item">
+            <%= link_to image_tag(car.image), car_path(car) ,  class: "img-responsive"%>
+        </div>
+        <% end %>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
 

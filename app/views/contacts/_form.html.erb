@@ -1,0 +1,13 @@
+<%= simple_form_for(@contact) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name, placeholder: "Name" %>
+    <%= f.input :email, placeholder: "example@email.com" %>
+    <%= f.input :comment , as: :text, placeholder: "Ask Your uestions" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit,class: "btn btn-success btn-lg" %>
+  </div>
+<% end %>
