@@ -14,5 +14,5 @@
 #
 
 class Service < ActiveRecord::Base
-	validates :name, :mobileno,:email, :car, :year, :proble, presence: true
+	validates :name, :mobileno,:email, :car, :year, :problem, presence: true
 end
